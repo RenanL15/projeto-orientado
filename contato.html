@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Contato | Sistemas para Internet</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <header>
+      <nav>
+        <span>Projeto Orientado</span>
+        <ul class="navbar-items">
+          <li>
+            <a href="/">Página inicial</a>
+          </li>
+          <li><a href="renan.html">Renan Almeida</a></li>
+          <li>
+            <a href="davi.html">Davi Pimentel</a>
+          </li>
+          <li><a href="curiosidades.html">Tabela de curiosidades</a></li>
+          <li><a href="favoritos.html">Sites favoritos</a></li>
+          <li id="item-ativado"><a href="contato.html">Contato</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <form
+        action="http://hub.fatecrl.edu.br/sobrino/recebe-v2.php"
+        method="post"
+      >
+        <div class="input-form">
+          <label for="nome">Nome:</label>
+          <input
+            type="text"
+            name="nome"
+            id="nome"
+            placeholder="Judas Iscariotes"
+            required
+          />
+        </div>
+        <div class="input-form">
+          <label for="tel">Telefone:</label>
+          <input
+            type="tel"
+            name="telefone"
+            id="tel"
+            pattern="(\([0-9]{2}\))\s([9]{1})?([0-9]{4})-([0-9]{4})"
+            placeholder="(99) 9999-9999"
+            required
+          />
+        </div>
+        <div class="input-form">
+          <label for="email">Email:</label>
+          <input
+            type="email"
+            name="email"
+            id="email"
+            placeholder="exemplo@tmj.com"
+            required
+          />
+        </div>
+        <div class="input-form">
+          <label for="msg">Deixe um recado:</label>
+          <textarea
+            name="mensagem"
+            id="msg"
+            cols="30"
+            rows="10"
+            placeholder="Escreva aqui alguma dúvida que possa ter!"
+            required
+          ></textarea>
+        </div>
+        <fieldset>
+          <legend>Você gostou do site?</legend>
+          <label for="sim">Sim:</label>
+          <input type="radio" name="opn" id="sim" />
+          <label for="nao">Não:</label>
+          <input type="radio" name="opn" id="nao" />
+        </fieldset>
+        <button>Enviar</button>
+      </form>
+    </main>
+    <footer>
+      <span>Feito por Davi Pimentel e Renan Almeida</span>
+    </footer>
+  </body>
+</html>
