@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
+    <meta charset="UTF-8" >
     <title>Contato | Sistemas para Internet</title>
-    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="assets/css/style.css" >
   </head>
   <body>
     <header>
@@ -27,8 +27,7 @@
       <h1>Entre em contato</h1>
       <form
         action="http://hub.fatecrl.edu.br/sobrino/recebe-v2.php"
-        method="post"
-      >
+        method="post">
         <div class="input-form">
           <label for="nome">Nome:</label>
           <input
@@ -36,8 +35,7 @@
             name="nome"
             id="nome"
             placeholder="Judas Iscariotes"
-            required
-          />
+            required >
         </div>
         <div class="input-form">
           <label for="tel">Telefone:</label>
@@ -47,8 +45,7 @@
             id="tel"
             pattern="(\([0-9]{2}\))\s([9]{1})?([0-9]{4})-([0-9]{4})"
             placeholder="(99) 9999-9999"
-            required
-          />
+            required >
         </div>
         <div class="input-form">
           <label for="email">Email:</label>
@@ -57,8 +54,7 @@
             name="email"
             id="email"
             placeholder="exemplo@tmj.com"
-            required
-          />
+            required >
         </div>
         <div class="input-form">
           <label for="msg">Deixe um recado:</label>
@@ -68,17 +64,16 @@
             cols="30"
             rows="10"
             placeholder="Escreva aqui alguma dúvida que possa ter!"
-            required
-          ></textarea>
+            required></textarea>
         </div>
         <fieldset>
           <legend>Você gostou do site?</legend>
           <label for="sim">Sim:</label>
-          <input type="radio" name="opn" id="sim" />
+          <input type="radio" name="gostouDoSite" value="sim" id="sim" >
           <label for="nao">Não:</label>
-          <input type="radio" name="opn" id="nao" />
+          <input type="radio" name="gostouDoSite" value="nao" id="nao" >
         </fieldset>
-        <button>Enviar</button>
+        <button id="enviar-button">Enviar</button>
       </form>
     </main>
     <footer>
