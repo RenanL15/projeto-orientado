@@ -1,13 +1,13 @@
 /* 
   PROPRIEDADES NOVAS:
   scale - [Altera tamanho de um elemento sem afetar os outros elementos.]
-  Uso: usei o scale para quando o mouse passar o mouse em cima da imagem de um integrante ela aumenta um pouco de tamanho.
+  Uso: usei o scale para quando o mouse passar o mouse em cima da imagem de um integrante ou de um item de um site favorito ela aumenta um pouco de tamanho.
+
+  transform - [Manipula visualmente um elemento (dimensionar, mover, rotacionar, etc)]
+  Uso: o transform foi usado para quando o usuário passar o mouse em cima de uma habilidade, o elemento da um efeito de subir um pouco e quando passar o mouse em cima de um item de um site favorito, a imagem rotaciona em 15 graus no setindo horário.
 
   max-width - [Ajusta um limite de width para um determinado elemento, ou seja, o elemento não passará o limite do tamanho sugerido no max-width.]
   Uso: utilizei o max-width para limitar a largura do contêiner "info-pessoal" nas páginas dos integrantes.
-
-  transform - [Manipula visualmente um elemento (dimensionar, mover, rotacionar, etc)]
-  Uso: o transform foi usado para quando o usuário passar o mouse em cima de uma habilidade ou um item de um site favorito, o elemento da um efeito de subir um pouco.
 
   z-index - [Sobrepõe um elemento acima dos outros dependendo do número sugerido no z-index, se tiverem mais de um z-index, o z-index com maior valor, vai sobrepor o outro]
   Uso: o z-index foi utilizado no navbar para sobrepor todos os elementos abaixo quando a página é descida pelo usuário enquanto ele navega.
@@ -163,7 +163,7 @@ p {
   color: #fff;
   margin: auto;
   border-radius: 10px;
-  max-width: 90em; /* Explicado na linha 6 */
+  max-width: 90em; /* Explicado na linha 9 */
   padding: 2em;
   border: 1px solid #fff;
 }
@@ -210,7 +210,7 @@ p {
 
 .foto-e-habilidades li:hover {
   background: rgba(255, 255, 255, 0.2);
-  transform: translateY(-4px); /* Explicado na linha 9 */
+  transform: translateY(-4px); /* Explicado na linha 6 */
 }
 
 .foto-integrante {
@@ -275,7 +275,7 @@ td {
 .secao-favoritos {
   display: flex;
   justify-content: center;
-  margin-top: 5em;
+  margin-top: 3em;
   gap: 4em;
 }
 
@@ -323,11 +323,17 @@ td {
   right: -10px;
   width: 80px;
   opacity: 0.2;
+  transition-duration: 400ms;
 }
 
 .sites-favoritos a:hover {
   background-color: rgba(255, 255, 255, 0.2);
-  transform: translateY(-3px); /* Explicado na linha 9 */
+  transform: translateY(-3px); /* Explicado na linha 6 */
+}
+
+.sites-favoritos a:hover img {
+  transform: rotate(15deg); /* Explicado na linha 6 */
+  scale: 1.15;
 }
 
 /* Contato */
@@ -353,7 +359,7 @@ label {
   color: #fff;
 }
 
-div > label {
+form > div > label {
   color: #000;
   background: #fff;
   align-self: start;
@@ -385,6 +391,34 @@ textarea::placeholder {
 }
 
 fieldset {
+  border: 1px solid #FFF;
+  padding: 1.5em;
+}
+
+fieldset > legend {
+  color: #FFF;
+}
+
+fieldset label {
+  display: inline-block;
+  background-color: #eee;
+  border-radius: 20px;
+  padding: 10px 20px;
+  margin: 0 .5em;
+  color: #000;
+  cursor: pointer;
+}
+
+fieldset label:hover {
+  background-color: #f1f1f1;
+}
+
+fieldset input {
+  vertical-align: middle;
+  width: 15px;
+  height: 15px;
+  accent-color: #078a85;
+  display: inline-block;
 }
 
 #enviar-button {
@@ -409,6 +443,32 @@ footer {
   text-align: center;
 }
 
-footer span {
+footer p {
+  color: #000;
   font-size: 1.25rem;
+  word-spacing: 2px;
+}
+
+footer a {
+  color: #078a85;
+  text-decoration: none;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
+#mencao-sobrino {
+  color: #000;
+  font-style: italic;
+  margin-top: 1em;
+  font-size: 1rem;
+}
+
+#mencao-sobrino a {
+  color: #078a85;
+}
+
+#mencao-sobrino a:hover {
+  text-decoration: underline;
 }

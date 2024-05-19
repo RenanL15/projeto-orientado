@@ -18,7 +18,7 @@
             <a href="davi.html">Davi Pimentel</a>
           </li>
           <li><a href="curiosidades.html">Tabela de curiosidades</a></li>
-          <li><a href="favoritos.html">Sites favoritos</a></li>
+          <li><a href="sites-favoritos.html">Sites favoritos</a></li>
           <li id="item-ativado"><a href="contato.html">Contato</a></li>
         </ul>
       </nav>
@@ -68,16 +68,21 @@
         </div>
         <fieldset>
           <legend>Você gostou do site?</legend>
-          <label for="sim">Sim:</label>
-          <input type="radio" name="gostouDoSite" value="sim" id="sim" >
-          <label for="nao">Não:</label>
-          <input type="radio" name="gostouDoSite" value="nao" id="nao" >
+            <label class="radio-label-container" for="sim">
+              Sim:
+              <input type="radio" name="gostouDoSite" value="sim" id="sim" >
+            </label>
+            <label class="radio-label-container" for="nao">
+              Não:
+              <input type="radio" name="gostouDoSite" value="nao" id="nao" >
+            </label>
         </fieldset>
         <button id="enviar-button">Enviar</button>
       </form>
     </main>
     <footer>
-      <span>Feito por Davi Pimentel e Renan Almeida</span>
+      <p>Feito por <a href="https://www.linkedin.com/in/renan-almeida-lopes" target="_blank">Renan Almeida</a> e <a href="https://www.linkedin.com/in/davi-menezes-pimentel-3993a623a" target="_blank">Davi Pimentel</a>.</p>
+      <p id="mencao-sobrino">Orientado pelo professor <a href="https://www.linkedin.com/in/alexandre-sobrino-663b551a3" target="_blank">Alexandre Sobrino</a>.</p>
     </footer>
   </body>
 </html>
