@@ -4,7 +4,7 @@
   Uso: usei o scale para quando o mouse passar o mouse em cima da imagem de um integrante ou de um item de um site favorito ela aumenta um pouco de tamanho.
 
   transform - [Manipula visualmente um elemento (dimensionar, mover, rotacionar, etc)]
-  Uso: o transform foi usado para quando o usuário passar o mouse em cima de uma habilidade, o elemento da um efeito de subir um pouco e quando passar o mouse em cima de um item de um site favorito, a imagem rotaciona em 15 graus no setindo horário.
+  Uso: o transform foi usado para quando o usuário passar o mouse em cima de uma info, o elemento da um efeito de subir um pouco e quando passar o mouse em cima de um item de um site favorito, a imagem rotaciona em 15 graus no setindo horário.
 
   max-width - [Ajusta um limite de width para um determinado elemento, ou seja, o elemento não passará o limite do tamanho sugerido no max-width.]
   Uso: utilizei o max-width para limitar a largura do contêiner "info-pessoal" nas páginas dos integrantes.
@@ -37,12 +37,12 @@ nav {
   width: 100%;
 }
 
-nav span {
+nav h1 {
   display: inline-block;
   font-size: 2rem;
   font-family: "Righteous";
   color: #0dc8c1;
-  filter: drop-shadow(2px 2px 1px rgba(0, 0, 0, 1));
+  filter: drop-shadow(2px 2px 1px rgba(0, 0, 0, .8));
   margin: 0.4em 0 0.4em 0;
   letter-spacing: 2px;
 }
@@ -183,32 +183,37 @@ p {
   filter: drop-shadow(2px 2px 0px rgba(0, 0, 0, 0.5));
 }
 
-/* Parte da foto e habilidades */
+/* Parte da foto e infos */
 
-.foto-e-habilidades {
+.foto-e-infos {
   text-align: center;
   width: 100%;
   margin-right: 5em;
 }
 
-.foto-e-habilidades > img {
-  margin: 2em 0 2em 0;
+.foto-e-infos > img {
+  margin: 2em 0;
 }
 
-.foto-e-habilidades li {
+.foto-e-infos li {
   display: flex;
   align-items: center;
   margin-top: 1em;
   border: 1px solid #fff;
   color: #fff;
   padding: 10px 40px 10px 10px;
-  gap: 10px;
+  gap: 20px;
   font-size: 1.25rem;
   transition-duration: 200ms;
   cursor: default;
 }
 
-.foto-e-habilidades li:hover {
+.foto-e-infos li > img {
+  width: 30px;
+  filter: invert();
+}
+
+.foto-e-infos li:hover {
   background: rgba(255, 255, 255, 0.2);
   transform: translateY(-4px); /* Explicado na linha 6 */
 }
